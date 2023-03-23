@@ -1,9 +1,12 @@
-FROM python:3.11.1-slim
+FROM python:3.10
+
+COPY . /app
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN apt-get update && apt-get upgrade
 RUN pip install -r requirements.txt
 
-COPY . .
+EXPOSE 9000
+
+# Chạy ứng dụng
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9000"]
