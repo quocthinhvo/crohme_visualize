@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CROHME Visualize</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  </head>
+<body>
+    <!-- Navigation bar -->
+  <nav class="flex items-center justify-between bg-white shadow-sm px-6 py-4">
+    <div class="text-lg font-bold text-gray-800">CROHME Visualize</div>
+    <div class="flex items-center">
+      <a href="#" class="text-gray-600 hover:text-gray-800 font-medium mr-4">Contact</a>
+    </div>
+  </nav>
+  
+  <!-- Main section -->
+  <main class="container mx-auto mt-8">
+    <form class="container mx-auto mt-8 max-w-lg" action="/result">
+      <label for="text-path" class="block text-lg font-medium text-gray-800">Output file path</label>
+      <input type="text" id="text-path" name="path" class="border rounded-lg py-2 px-3 w-full mb-4" required>
+    
+      <label for="start-value" class="block text-lg font-medium text-gray-800">Start Value</label>
+      <input type="number" id="start-value" name="start" class="border rounded-lg py-2 px-3 w-full mb-4" required>
+    
+      <label for="end-value" class="block text-lg font-medium text-gray-800">End Value</label>
+      <input type="number" id="end-value" name="end" class="border rounded-lg py-2 px-3 w-full mb-4" required>
+    
+      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">Submit</button>
+    </form>
+    
+    
+  </main>
+</body>
+
+</html>
