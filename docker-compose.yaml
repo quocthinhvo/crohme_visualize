@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  gt2video:
+    build: .
+    container_name: crohme_visualize
+    command: uvicorn main:app --host 0.0.0.0 --workers 4 --port 5005
+    volumes:
+      - ./:/app
+      - /mlcv/:/mlcv
+    ports:
+      - 5005:5005
+    restart: unless-stopped
